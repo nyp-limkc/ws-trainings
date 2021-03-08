@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Budget Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="budget-section">
+        <h1>Available Budget</h1>
+        <article class="budget-income-article">
+            <h3>Income</h3>
+            <div class="budget-income">$0
+            </div>
+        </article>
+        <article class="budget-expenses-article">
+            <h3>Expenses</h3>
+            <div class="budget-expenses">$0
+            </div>
+        </article>
+        <article class="budget-balance-article">
+            <h3>Balance</h3>
+            <div class="budget-balance">$0
+            </div>
+        </article>
+    </section>
+    <section class="input-section">
+        <article class="add_container">
+            <select class="type plus">
+                <option value="plus" selected>+</option>
+                <option value="minus">-</option>
+            </select>
+            <input type="text" class="description plus" placeholder="Add description">
+            <input type="number" class="value plus" placeholder="Value">
+            <!-- <button class="tick_btn plus">L</button> -->
+        </article>
+    </section>
+    <section class="details-section">
+        <article class="details-income-article">
+            <h2>Income</h2>
+            <div class="income-list">
+            </div>
+        </article>
+        <article class="details-expenses-article">
+            <h2>Expenses</h2>
+            <div class="expenses-list">
+            </div>
+        </article>
+    </section>
+    <script src="jquery.min.js"></script>
+    <script src="budget.js"></script>
+</body>
+
+</html>

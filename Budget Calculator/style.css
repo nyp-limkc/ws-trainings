@@ -1,0 +1,134 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 18px;
+}
+
+section:not(:first-child) {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.budget-section {
+    padding: 20px;
+    background: url(back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+.budget-section article {
+    width: 20%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.budget-section article h3 {
+    display: inline-block;
+}
+
+.budget-balance-article {
+    background: rgba(255, 255, 255, 0.53);
+    font-weight: bold;
+}
+
+.budget-income-article {
+    background: rgba(0, 175, 0, 0.53);
+}
+
+.budget-expenses-article {
+    background: rgba(255, 70, 70, 0.53);
+}
+
+.tick_btn {
+    background-color: Transparent;
+    border: 1px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    transform: scaleX(-1) rotate(-35deg);
+    font-size: 1.2em;
+    padding: 3px 7px;
+}
+
+.details-section {
+    display: flex;
+    width: 50%;
+}
+.details-section article {
+    display: inline-block;
+    width: 50%;
+    margin-right: 20px;
+}
+
+.plus {
+    border: 3px solid green;
+}
+
+.minus {
+    border: 3px solid red;
+}
+
+.details-section {
+    display: flex;
+    width: 50%;
+}
+
+.details-section article {
+    width: 40%;
+    margin-right: 10%;
+}
+
+.details-section article div {
+    margin-top: 20px;
+}
+
+.details-income-article .detail-value {
+    color: green;
+}
+
+.details-expenses-article .detail-value {
+    color: red;
+}
+
+.details-section {
+    display: flex;
+    width: 50%;
+}
+
+.details-section article {
+    width: 40%;
+    margin-right: 10%;
+}
+
+.details-section article div {
+    margin-top: 20px;
+}
+
+.details-income-article .detail-value {
+    color: green;
+}
+
+.details-expenses-article .detail-value {
+    color: red;
+}
+
+.details-breakdown {
+    display:flex;
+}
+
+.detail-description {
+    flex:2;
+}
+.detail-value {
+    flex:1;
+}

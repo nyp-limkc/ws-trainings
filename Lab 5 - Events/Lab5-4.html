@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Mouse Events</title>
+    <style>
+        #demoButton {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="demoButton">Play with me</button>
+    <button id="clearButton">Clear Log</button><br>
+    <textarea id="demoArea" rows="30" cols="50"></textarea>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            var demoBtn = $("#demoButton");
+            var textArea = $("#demoArea");
+            var contents = "";
+            $("#clearButton").click(() => {
+                textArea.text("");
+                contents = "";
+            });
+
+            demoBtn.mouseenter(() => {
+                contents += "mouseenter\n";
+                textArea.text(contents);
+            });
+
+            demoBtn.mouseleave(() => {
+                contents += "mouseleave\n";
+                textArea.text(contents);
+            });
+
+            demoBtn.dblclick(() => {
+                contents += "doubleclick\n";
+                textArea.text(contents);
+            });
+
+            demoBtn.mousemove((e) => {
+                contents += "mousemove " + e.clientX + "," + e.clientY + "\n";
+                textArea.text(contents);
+            })
+
+        })
+    </script>
+</body>
+
+</html>

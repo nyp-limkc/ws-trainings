@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Events</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <ul class="grid">
+    <li><a href="http://www.google.com"><img src="images/ylw.gif" alt="yellow"></a></li>
+    <li><a href="http://www.google.com"><img src="images/org.gif" alt="orange"></a></li>
+    <li><a href="http://www.google.com"><img src="images/ppl.gif" alt="purple"></a></li>
+    <li><a href="http://www.google.com"><img src="images/blu.gif" alt="blue"></a></li>
+    <li><a href="http://www.google.com"><img src="images/pnk.gif" alt="pink" id="pink"></a></li>
+    <li><a href="http://www.google.com"><img src="images/ygr.gif" alt="ygreen"></a></li>
+    <li><a href="http://www.google.com"><img src="images/gry.gif" alt="gray"></a></li>
+    <li><a href="http://www.google.com"><img src="images/red.gif" alt="red"></a></li>
+  </ul>
+  <script src="jquery.min.js"></script>
+  <script>
+    $(document).ready(() => {
+      $(".grid").click((e) => {
+        e.preventDefault();
+        console.log("clicked on UL");
+      })
+
+      $("#pink").click((e) => {
+        e.preventDefault();
+        console.log(e.target.alt);
+        e.stopPropagation();
+      })
+
+    })
+
+  </script>
+</body>
+
+</html>
