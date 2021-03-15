@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Handling in Canvas</title>
+    <style>
+        #myCanvas {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="400"></canvas><br>
+    <select class="tool">
+        <option disabled selected>Select a drawing tool</option>
+        <option value="line">Line</option>
+        <option value="dot">Dot</option>
+        <option value="eraser">Eraser</option>
+    </select>
+    <button class="clearBtn">Clear canvas</button><br>
+    <label>
+        Pick a color:
+        <input type="color" class="colorChoice">
+    </label><br>
+    <label>
+        Line width <span class="lineWidthVal">3</span>px
+        <input type="range" id="lineWidthRange" min="1" max="10" value="3">
+    </label>
+    <label>
+        Circle radius <span class="circleRadiusVal">15</span>px
+        <input type="range" id="circleRadius" min="10" max="30" value="15">
+    </label>
+    <script src="jquery.min.js"></script>
+    <script src="Lab8-2.js"></script>
+</body>
+</html>
