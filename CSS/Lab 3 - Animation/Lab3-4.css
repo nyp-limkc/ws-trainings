@@ -1,0 +1,63 @@
+.demo {
+    color: #fff;
+    font-size: 6rem;
+    overflow: hidden;
+    padding: 2rem 4rem;
+    position: relative;
+    text-align: center;
+  }
+  
+  .demo:before {
+    background: #3991AE;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-110%,95%);
+    animation: show-bg 1s ease-out forwards;
+  }
+
+  .demo span {
+    display: inline-block;
+    opacity: 0;
+    animation: pop-in 1s .9s cubic-bezier(0,.8,.4,1.25) forwards;
+    transform: scale(1);
+  }
+  
+  .demo .text-part-2 {
+    animation-delay: 1.8s;
+  }
+  
+
+  @keyframes show-bg {
+    0% {
+      transform: translate(-110%,95%);
+    }
+  
+    50% {
+      transform: translate(0,95%);
+    }
+  
+    100% {
+      transform: none;
+    }
+  }
+
+  @keyframes pop-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.2);
+    }
+    40% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  

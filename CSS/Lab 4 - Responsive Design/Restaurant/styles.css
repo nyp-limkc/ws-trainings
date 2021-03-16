@@ -1,0 +1,209 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --heading-color: rgb(255, 238, 0);
+    --text-color: rgb(182, 182, 182);
+    --color-brown-1: rgb(102, 17, 17);
+    --color-brown-2: rgb(48, 8, 8);
+}
+
+html {
+    font-size: 10px;  
+}
+
+header {
+    background-image: url("./images/coffee.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: var(--heading-color);
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.topNav {
+    padding-top: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 10rem;
+    height: 10rem;
+    padding-left: 4rem;
+}
+
+.topLinks {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-basis: 70%;
+}
+
+.topLinks li a{
+    font-size: 3rem;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 2rem;
+}
+
+.topLinks li a:hover {
+    color: yellow;
+    border-bottom: 1px solid yellow;
+}
+
+main {
+    height: 100rem;
+    padding-top: 3rem;
+    background: linear-gradient(to bottom, var(--color-brown-2), 10%, var(--color-brown-1), 80%, var(--color-brown-2));
+    display: flex;
+}
+
+.featuredFoodSection {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    margin-left: 2rem;
+    margin-right: 4rem;
+}
+
+.featuredFood {
+    width: 47rem;
+    height: 30rem;
+    box-shadow: .2rem .3rem .8rem black; 
+    transition: all .5s;
+}
+
+.featuredFoodArticle:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.featuredFoodArticle {
+    position: relative;
+}
+
+.featuredFoodDesc {
+    position: absolute;
+    left: 0;
+    bottom: -10%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: 800;
+    padding: 1rem;
+    opacity:0;
+    transition: all .2s;
+}
+
+.featuredFood:hover {
+    filter: brightness(140%);
+}
+.featuredFood:hover ~ .featuredFoodDesc {
+    bottom: 0;
+    width: 50%;
+    opacity: 1;
+}
+
+.mainContentSection {
+    padding: 2rem;
+}
+.mainContentSection p{
+    font-size: 2em;
+    color:var(--text-color);
+    letter-spacing: .5rem;
+}
+
+footer {
+    height: 15rem;
+    background-color: var(--color-brown-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialMediaLinks {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.socialMediaLinks li:not(:last-child) {
+    margin-right: 2rem;
+}
+.socialMediaIcon {
+    width: 5rem;
+    height: 4.5rem;
+}
+
+.copyright {
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.8rem;
+}
+
+@media screen and (max-width: 1440px) {
+    html {
+        font-size: 9px;
+    }
+}
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 8px;
+    }
+
+    .topLinks {
+        flex-basis: 80%;
+    }
+
+    .featuredFoodSection {
+        flex-basis: 25%;
+    }
+
+    .featuredFood {
+        width: 30rem;
+        height: 22rem;
+    }
+
+    .mainContentSection {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .topLinks:before {
+        content: '';
+    }
+    .topLinks {
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: 5rem;
+    }
+
+    .topLinks li a{
+        padding-bottom: .3rem;
+    }
+    main {
+        flex-direction: column;
+        height: 170rem;
+    }
+
+}
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 6px;
+    }
+
+    main {
+        height: 200rem;
+    }
+}

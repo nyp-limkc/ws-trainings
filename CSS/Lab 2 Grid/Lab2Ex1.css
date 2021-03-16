@@ -1,0 +1,86 @@
+* {
+    padding:0;
+    margin: 0;
+}
+body {
+    display: grid;
+    grid-template-rows: 10vh 75vh 10vh;
+    grid-gap: 5px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.siteTitle {
+    background-color: orange;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 5px;
+}
+
+.nav1,
+.nav2,
+.nav3 {
+    background-color: pink;
+}
+
+main {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(6,1fr);
+    grid-template-areas: 
+    "postTitle postTitle postTitle postTitle sideBar"
+    "postMeta mainContent mainContent mainContent sideBar"
+    "postMeta mainContent mainContent mainContent ads"
+    "postMeta mainContentImg mainContentImg mainContentImg ads"
+    "postMeta mainContentImg mainContentImg mainContentImg other"
+    "postMeta mainContentImg mainContentImg mainContentImg other"
+    ;
+
+}
+
+.postTitle {
+    background-color: skyblue;
+    grid-area: postTitle;
+}
+
+.postMeta {
+    background-color: lightgreen;
+    grid-area: postMeta;
+}
+
+.mainContent {
+    background-color: lightgray;
+    grid-area: mainContent;
+}
+
+.mainContentImg {
+    background-color: yellow;
+    grid-area: mainContentImg;
+}
+
+.sideBar {
+    background-color: darkorange;
+    grid-area: sideBar;
+}
+
+.ads {
+    background-color: green;
+    grid-area: ads;
+}
+
+.other {
+    background-color: magenta;
+    grid-area: other;
+}
+
+.footer {
+    background-color: gray;
+}
