@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Key Events</title>
+</head>
+
+<body>
+    <div id="main">
+        <button id="clearButton">Clear Log</button>
+        <br>
+        <textarea id="demoArea" rows="30" cols="50"></textarea>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            var textArea = $("#demoArea");
+            var body = $("body");
+            var contents = "";
+
+            $("#clearButton").click(() => {
+                textArea.text("");
+                contents = "";
+            });
+
+            body.keydown((e) => {
+                console.log(e);
+                contents += `keydown - Key: ${e.key} Code: ${e.code} Keycode: ${e.keyCode}\n`;
+                textArea.text(contents);
+            });
+
+            body.keyup((e) => {
+                contents += `keyup - Key: ${e.key} Code: ${e.code} Keycode: ${e.keyCode}\n`;
+                textArea.text(contents);
+            });
+            body.keypress((e) => {
+                contents += `keypress - Key: ${e.key} Code: ${e.code} Keycode: ${e.keyCode}\n`;
+                textArea.text(contents);
+            });
+
+
+        })
+    </script>
+</body>
+
+</html>
