@@ -1,0 +1,107 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 18px;
+}
+
+section:not(:first-child) {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.budget-section {
+    padding: 20px;
+    background: url(back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+.budget-section article {
+    width: 20%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.budget-section article h3 {
+    display: inline-block;
+}
+
+.budget-income-article {
+    background: rgba(0, 175, 0, 0.53);
+}
+
+.budget-expenses-article {
+    background: rgba(255, 70, 70, 0.53);
+}
+
+.tick_btn {
+    background-color: Transparent;
+    border: 1px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    transform: scaleX(-1) rotate(-35deg);
+    font-size: 1.2em;
+    padding: 3px 7px;
+}
+
+.details-section {
+    display: flex;
+    width: 50%;
+}
+.details-section article {
+    display: inline-block;
+    width: 50%;
+    margin-right: 20px;
+}
+
+.plus {
+    border: 1px solid green;
+}
+
+.minus {
+    border: 1px solid red;
+}
+
+.tick_btn.plus {
+    color: green;
+}
+
+.tick_btn.minus {
+    color: red;
+}
+
+.details-section {
+    display: flex;
+    width: 50%;
+}
+
+.details-breakdown {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-description {
+    flex: 2;
+}
+.detail-value {
+    flex: 1;
+}
+
+.income-list .detail-value {
+    color: green;
+}
+
+.expenses-list .detail-value {
+    color: red;
+}
