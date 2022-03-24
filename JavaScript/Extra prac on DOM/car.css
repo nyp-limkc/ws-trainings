@@ -1,0 +1,14 @@
+.cars {
+    display: flex;
+}
+
+.car {
+    border: 1px solid black;
+    padding: 15px;
+    flex-basis: 200px;
+    margin-right: 20px;
+}
+
+.driverInfo {
+    display: none;
+}
