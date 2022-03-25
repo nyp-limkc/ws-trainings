@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.inputSection {
+    display: none;
+}
+.battleship {
+    display: grid;
+    width: 150px;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.battleLoc {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.message {
+    color: red;
+}
+
+.miss {
+    color: white;
+    background-color: gray;
+}
+
+.hit {
+    color: yellow;
+    background-color: red;
+}
